@@ -71,11 +71,11 @@
 
         public function buscarAlumnos($filtro){
             $sql = "SELECT Num_Control, Nombre, Primer_Ap, segundo_ap
-                FROM Alumnos
-                WHERE Num_Control LIKE ?
-                OR Nombre LIKE ?
-                OR Primer_Ap LIKE ?
-                OR segundo_ap LIKE ?";
+                    FROM Alumnos
+                    WHERE Num_Control LIKE ?
+                        OR Nombre LIKE ?
+                        OR Primer_Ap LIKE ?
+                        OR segundo_ap LIKE ?";
 
 
             //esta es como mysqli_query pero para consultas
@@ -88,7 +88,7 @@
             return mysqli_stmt_get_result($res);
                
         }
-
+    }
 
 
 

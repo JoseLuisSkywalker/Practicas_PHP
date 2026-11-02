@@ -16,7 +16,11 @@
         require_once __DIR__ . '/../backend/controllers/alumno_dao.php';
         $alumnoDAO = new AlumnoDAO();
 
-        $datos = $alumnoDAO->mostrarAlumnos('x');
+        $q = trim($_GET['q'] ?? '');
+
+        $datos = ($q !== '')
+            ? $alumnoDAO->buscarAlumnos($q)
+            : $alumnoDAO->mostrarAlumnos('x');
 
         if (isset($_GET['nc'])) {
             $nc = $_GET['nc'];
@@ -24,7 +28,12 @@
             $resultado = $alumnoDAO->consultarAlumno($nc);
             $alumno = mysqli_fetch_assoc($resultado);
         }
-
+        
+     
+        echo '<form class="d-flex my-3" style="max-width: 500px;" action="bajas_cambios.php" method="GET">';
+        echo '<input class="form-control me-2" type="search" name="q" value="' . htmlspecialchars($q) . '" placeholder="Buscar por nc o nombre" aria-label="Search">';
+        echo '<button class="btn btn-outline-success" type="submit">Buscar</button>';
+        echo '</form>';
 
 
         $i = 0;
@@ -69,7 +78,8 @@
 
                                 <a href='../backend/scripts/procesar_baja.php?nc=%s'
                                 class='btn btn-danger btn-sm'>ELIMINAR</a>
-                              </td>"
+                              </td>
+                              </tr>"
                  , rawurlencode($fila['Num_Control']), rawurlencode($fila['Num_Control']), rawurlencode($fila['Num_Control']));
 
                 }
