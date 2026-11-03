@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #0f172a;
+        color: #f1f5f9;
+        padding: 50px 20px;
+    }
+    .contenedor {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    header {
+        margin-bottom: 45px;
+        padding-bottom: 25px;
+        border-bottom: 2px solid #334155;
+    }
+    header h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+        color: #f8fafc
+    }
+    header h1 span {
+        color: #60a5fa;
+    }
+    header p {
+        color: #94a3b8;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .seccion {
+        margin-bottom: 40px;
+    }
+    .seccion h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .tarjetas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+    .tarjeta {
+        display: block;
+        background-color: #110547;
+        border: 1px solid #01050c;
+        border-radius: 10px;
+        padding: 25px;
+        text-decoration: none;
+        color: #dadde0;
+        transition: 0.2s;
+    }
+    .tarjeta:hover {
+        border-color: #2563eb;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    .tarjeta h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .tarjeta p {
+        color: #babfc6;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+    .tarjeta .enlace {
+        color: #2563eb;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .principal {
+        border-left: 4px solid #2563eb;
+    }
+    footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #e2e8f0;
+        color: #687c9a;
+        text-align: center;
+        font-size: 13px;
+    }
+    @media (max-width: 750px) {
+        .tarjetas {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 500px) {
+        body {
+            padding: 30px 15px;
+        }
+        header h1 {
+            font-size: 27px;
+        }
+        .tarjetas {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+
+
+
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="contenedor">
+    <header>
+        <h1>Prácticas_PHP - <span>Backend Development</span></h1>
+    </header>
+    <section class="seccion">
+        <h2>Aplicación Escolares</h2>
+        <div class="tarjeta">
+            <a href="Practicas_PHP/App_ABCC_Escolares/login.php" class="Escolares">
+                <h3>App_ABCC_Escolares</h3>
+                <p>
+                    Fue una aplicación para una base de datos de alumnos, 
+                    donde se realizan operaciones CRUD. 
+                </p>
+                <span class="link">Abrir proyecto →</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <h2>Ejemplos de aprendizaje PHP</h2>
+        <div class="tarjeta">
+            <a href="Ejemplo_1_PHP_INTRO.php" class="Ejemplos">
+                <h3>Ejemplos PHP 1</h3>
+                <p>
+                    Ejercicio inicial de PHP 1.  
+                </p>
+                <span class="link">Abrir proyecto →</span>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="Ejemplo_2_ARRAYS.php" class="Ejemplos">
+                <h3>Ejemplo PHP 2</h3>
+                <p>
+                    Ejercicio inicial de PHP 2.  
+                </p>
+                <span class="link">Abrir proyecto →</span>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="Ejemplo_3_FORMULARIOS.php" class="Ejemplos">
+                <h3>Ejemplo PHP 3</h3>
+                <p>
+                    Ejercicio inicial de PHP 3.  
+                </p>
+                <span class="link">Abrir proyecto →</span>
+            </a>
+        </div>
+
+    </section>
+
+        
+    </div>
+
+</body>
+</html>
